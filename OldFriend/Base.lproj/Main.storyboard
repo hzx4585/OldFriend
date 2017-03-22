@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JZU-Gq-Aue">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Login View Controller-->
+        <scene sceneID="Kf8-7B-C7H">
+            <objects>
+                <viewController id="iym-I6-tSv" customClass="LoginViewController" customModule="OldFriend" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="iL4-G0-h9N"/>
+                        <viewControllerLayoutGuide type="bottom" id="Trf-m8-m5D"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n7K-zU-kUp">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="MUN" translatesAutoresizingMaskIntoConstraints="NO" id="ju0-px-Jfo">
+                                <rect key="frame" x="157" y="124" width="60" height="60"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="60" id="Qxk-kE-8b5"/>
+                                    <constraint firstAttribute="width" constant="60" id="eTg-zQ-88P"/>
+                                </constraints>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="l9Y-Oo-rR2">
+                                <rect key="frame" x="16" y="436" width="343" height="110"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cY8-3X-5tg">
+                                        <rect key="frame" x="0.0" y="0.0" width="343" height="30"/>
+                                        <state key="normal" title="老友帐号登录注册">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="OldFriendAccountLoginButton:" destination="iym-I6-tSv" eventType="touchUpInside" id="wUH-fK-h9d"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pnc-by-Jbm">
+                                        <rect key="frame" x="0.0" y="40" width="343" height="30"/>
+                                        <state key="normal" title="微信帐号登录注册">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8QX-Te-l1Q">
+                                        <rect key="frame" x="0.0" y="80" width="343" height="30"/>
+                                        <state key="normal" title="其他方式登录">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                            <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        </state>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.68627450980000004" blue="0.63921568630000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="Trf-m8-m5D" firstAttribute="top" secondItem="l9Y-Oo-rR2" secondAttribute="bottom" constant="121" id="5tS-x9-Yte"/>
+                            <constraint firstItem="ju0-px-Jfo" firstAttribute="top" secondItem="iL4-G0-h9N" secondAttribute="bottom" constant="60" id="h2l-Y8-dTj"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="l9Y-Oo-rR2" secondAttribute="trailing" id="kmx-PS-Vgd"/>
+                            <constraint firstItem="ju0-px-Jfo" firstAttribute="centerX" secondItem="n7K-zU-kUp" secondAttribute="centerX" id="n7h-Wz-zMF"/>
+                            <constraint firstItem="l9Y-Oo-rR2" firstAttribute="leading" secondItem="n7K-zU-kUp" secondAttribute="leadingMargin" id="wkP-Jq-7m3"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="kN5-6N-2OJ"/>
+                    <connections>
+                        <outlet property="OldFriendLogo" destination="ju0-px-Jfo" id="jEA-Lg-urO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Cl3-wC-7Ca" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="692" y="35"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="0SF-WW-Bd7">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JZU-Gq-Aue" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="5r1-sU-nf3">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="iym-I6-tSv" kind="relationship" relationship="rootViewController" id="OQD-Y2-1LZ"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Htm-zi-TDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-42" y="35"/>
+        </scene>
+        <!--List View Controller-->
+        <scene sceneID="ZhX-GJ-drQ">
+            <objects>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="KSs-wd-OH0" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tableViewController storyboardIdentifier="ListViewController" id="HL1-1X-iFa" customClass="ListViewController" customModule="OldFriend" customModuleProvider="target" sceneMemberID="viewController">
+                    <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" id="gJU-Oa-WSu">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <prototypes>
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="Cell" id="LXz-9o-l0g">
+                                <rect key="frame" x="0.0" y="28" width="375" height="44"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                                <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LXz-9o-l0g" id="vKg-zX-9tx">
+                                    <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
+                                    <autoresizingMask key="autoresizingMask"/>
+                                </tableViewCellContentView>
+                            </tableViewCell>
+                        </prototypes>
+                        <connections>
+                            <outlet property="dataSource" destination="HL1-1X-iFa" id="O43-A6-enY"/>
+                            <outlet property="delegate" destination="HL1-1X-iFa" id="NrF-Jf-rkW"/>
+                        </connections>
+                    </tableView>
+                </tableViewController>
+            </objects>
+            <point key="canvasLocation" x="1377" y="35"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="MUN" width="372" height="372"/>
+    </resources>
+</document>

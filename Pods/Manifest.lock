@@ -1,0 +1,12 @@
+PODS:
+  - TabPageViewController (0.2.5)
+
+DEPENDENCIES:
+  - TabPageViewController
+
+SPEC CHECKSUMS:
+  TabPageViewController: 66aca4291518e66f6ef6800bfe3a98217f58a434
+
+PODFILE CHECKSUM: e4668f166f5c010964d6b79e294193e9eb779e50
+
+COCOAPODS: 1.2.0
