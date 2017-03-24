@@ -13,7 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var OldFriendLogo: UIImageView!
 
     @IBAction func OldFriendAccountLoginButton(_ sender: UIButton) {
-        let signUpButton = UIBarButtonItem(title: "注册", style: .plain, target: nil, action: nil)
+        let signUpButton = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(signUpButtonTapped))
         let tc = TabPageViewController.create()
         let vc1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OldFriendAccountLoginTableViewController")
         
@@ -28,6 +28,12 @@ class LoginViewController: UIViewController {
         tc.title = "老友账号登录"
 
     }
+    
+    func signUpButtonTapped() {
+        let vc1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "SignUpTableViewController")
+        navigationController?.pushViewController(vc1, animated: true)
+    }
+
     override func viewDidLoad() {
         super.viewDidLoad()
         OldFriendLogo.layer.cornerRadius = 30.0
