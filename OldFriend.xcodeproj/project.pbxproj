@@ -12,7 +12,8 @@
 		1FD36A421E826EA1003A4734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FD36A411E826EA1003A4734 /* Assets.xcassets */; };
 		1FD36A451E826EA1003A4734 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD36A431E826EA1003A4734 /* LaunchScreen.storyboard */; };
 		1FD36A4F1E826F08003A4734 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD36A4E1E826F08003A4734 /* LoginViewController.swift */; };
-		1FD36A531E8270DB003A4734 /* ListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD36A521E8270DB003A4734 /* ListViewController.swift */; };
+		1FD36A5B1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD36A5A1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift */; };
+		1FD36A5D1E84C2BB003A4734 /* MobileLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD36A5C1E84C2BB003A4734 /* MobileLoginViewController.swift */; };
 		A4B237974A4D982CD4C88BFF /* Pods_OldFriend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B4E6AAB0D4F57128B774D0 /* Pods_OldFriend.framework */; };
 /* End PBXBuildFile section */
 
@@ -24,7 +25,8 @@
 		1FD36A441E826EA1003A4734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1FD36A461E826EA1003A4734 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1FD36A4E1E826F08003A4734 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
-		1FD36A521E8270DB003A4734 /* ListViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListViewController.swift; sourceTree = "<group>"; };
+		1FD36A5A1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldFriendAccountLoginTableViewController.swift; sourceTree = "<group>"; };
+		1FD36A5C1E84C2BB003A4734 /* MobileLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileLoginViewController.swift; sourceTree = "<group>"; };
 		5D9E047D46F1FA08BAD19F88 /* Pods-OldFriend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OldFriend.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OldFriend/Pods-OldFriend.debug.xcconfig"; sourceTree = "<group>"; };
 		70B4E6AAB0D4F57128B774D0 /* Pods_OldFriend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OldFriend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7546B3A4DFC159B13F4C1252 /* Pods-OldFriend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OldFriend.release.xcconfig"; path = "Pods/Target Support Files/Pods-OldFriend/Pods-OldFriend.release.xcconfig"; sourceTree = "<group>"; };
@@ -65,7 +67,8 @@
 			children = (
 				1FD36A501E826F17003A4734 /* SupportingFiles */,
 				1FD36A4E1E826F08003A4734 /* LoginViewController.swift */,
-				1FD36A521E8270DB003A4734 /* ListViewController.swift */,
+				1FD36A5A1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift */,
+				1FD36A5C1E84C2BB003A4734 /* MobileLoginViewController.swift */,
 				1FD36A3E1E826EA1003A4734 /* Main.storyboard */,
 			);
 			path = OldFriend;
@@ -224,8 +227,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				1FD36A4F1E826F08003A4734 /* LoginViewController.swift in Sources */,
+				1FD36A5B1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift in Sources */,
 				1FD36A3B1E826EA1003A4734 /* AppDelegate.swift in Sources */,
-				1FD36A531E8270DB003A4734 /* ListViewController.swift in Sources */,
+				1FD36A5D1E84C2BB003A4734 /* MobileLoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

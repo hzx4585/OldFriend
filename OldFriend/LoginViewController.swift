@@ -14,9 +14,9 @@ class LoginViewController: UIViewController {
 
     @IBAction func OldFriendAccountLoginButton(_ sender: UIButton) {
         let tc = TabPageViewController.create()
-        let vc1 = UIViewController()
-        vc1.view.backgroundColor = UIColor.white
-        let vc2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "ListViewController")
+        let vc1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OldFriendAccountLoginTableViewController")
+        
+        let vc2 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "MobileLoginViewController")
         tc.tabItems = [(vc1, "账号密码登录"), (vc2, "手机快捷登录")]
         var option = TabPageOption()
         option.tabWidth = view.frame.width / CGFloat(tc.tabItems.count)
