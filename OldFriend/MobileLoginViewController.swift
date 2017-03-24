@@ -14,7 +14,6 @@ class MobileLoginViewController: UITableViewController {
     override func viewDidLayoutSubviews() {
     super.viewDidLayoutSubviews()
     
-    //self.navigationItem.title = "老友账号登录"
     LoginButton.layer.cornerRadius = 3.0
     
     let navigationHeight = topLayoutGuide.length

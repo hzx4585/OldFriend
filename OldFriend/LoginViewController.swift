@@ -13,6 +13,7 @@ class LoginViewController: UIViewController {
     @IBOutlet weak var OldFriendLogo: UIImageView!
 
     @IBAction func OldFriendAccountLoginButton(_ sender: UIButton) {
+        let signUpButton = UIBarButtonItem(title: "注册", style: .plain, target: nil, action: nil)
         let tc = TabPageViewController.create()
         let vc1 = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "OldFriendAccountLoginTableViewController")
         
@@ -22,6 +23,9 @@ class LoginViewController: UIViewController {
         option.tabWidth = view.frame.width / CGFloat(tc.tabItems.count)
         tc.option = option
         navigationController?.pushViewController(tc, animated: true)
+        tc.navigationItem.rightBarButtonItem = signUpButton
+        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        tc.title = "老友账号登录"
 
     }
     override func viewDidLoad() {
