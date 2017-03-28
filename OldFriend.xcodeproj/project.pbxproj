@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		1F25AA511E85185D00AED35E /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25AA501E85185D00AED35E /* SignUpTableViewController.swift */; };
+		1F3E77181E89FDA80016F90C /* InputVerificationCodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E77171E89FDA80016F90C /* InputVerificationCodeTableViewController.swift */; };
 		1FD36A3B1E826EA1003A4734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD36A3A1E826EA1003A4734 /* AppDelegate.swift */; };
 		1FD36A401E826EA1003A4734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD36A3E1E826EA1003A4734 /* Main.storyboard */; };
 		1FD36A421E826EA1003A4734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FD36A411E826EA1003A4734 /* Assets.xcassets */; };
@@ -20,6 +21,7 @@
 
 /* Begin PBXFileReference section */
 		1F25AA501E85185D00AED35E /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
+		1F3E77171E89FDA80016F90C /* InputVerificationCodeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputVerificationCodeTableViewController.swift; sourceTree = "<group>"; };
 		1FD36A371E826EA1003A4734 /* OldFriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OldFriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD36A3A1E826EA1003A4734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FD36A3F1E826EA1003A4734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -72,6 +74,7 @@
 				1FD36A5A1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift */,
 				1FD36A5C1E84C2BB003A4734 /* MobileLoginViewController.swift */,
 				1FD36A3E1E826EA1003A4734 /* Main.storyboard */,
+				1F3E77171E89FDA80016F90C /* InputVerificationCodeTableViewController.swift */,
 				1F25AA501E85185D00AED35E /* SignUpTableViewController.swift */,
 			);
 			path = OldFriend;
@@ -229,6 +232,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1F3E77181E89FDA80016F90C /* InputVerificationCodeTableViewController.swift in Sources */,
 				1F25AA511E85185D00AED35E /* SignUpTableViewController.swift in Sources */,
 				1FD36A4F1E826F08003A4734 /* LoginViewController.swift in Sources */,
 				1FD36A5B1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift in Sources */,
