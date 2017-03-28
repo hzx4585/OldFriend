@@ -9,13 +9,11 @@
 import UIKit
 
 class InputVerificationCodeTableViewController: UITableViewController {
-    private var phoneNumber = ""
-    @IBOutlet weak var messageTextField: UITextField!
-    
-
+    @IBOutlet weak var messageLabel: UILabel!
+    var phoneNumber = ""
     override func viewDidLoad() {
         super.viewDidLoad()
-        messageTextField.text = phoneNumber
+        messageLabel.text = "短信验证码已经发送到" + phoneNumber
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 

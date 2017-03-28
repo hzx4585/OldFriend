@@ -24,10 +24,10 @@ class SignUpTableViewController: UITableViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "getVerificaionCodeSegue" {
             let destinationController = segue.destination as! InputVerificationCodeTableViewController
-            print("phoneNumber" + phoneNumberTextField.text!)
+            print("phoneNumber: " + phoneNumberTextField.text!)
             if let phoneNumber = phoneNumberTextField.text {
-                destinationController.messageTextField?.text = phoneNumber
-                //destinationController.setValue(phoneNumber, forKey: "phoneNumber")
+                //destinationController.messageLabel.text = phoneNumber
+                destinationController.setValue(phoneNumber, forKey: "phoneNumber")
             }
         }
     }
