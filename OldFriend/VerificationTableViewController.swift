@@ -1,5 +1,5 @@
 //
-//  FindPasswordPhoneNumberTableViewController.swift
+//  VerificationTableViewController.swift
 //  OldFriend
 //
 //  Created by 黄之信 on 17/3/29.
@@ -8,11 +8,18 @@
 
 import UIKit
 
-class FindPasswordPhoneNumberTableViewController: UITableViewController {
-    
+class VerificationTableViewController: UITableViewController {
+
     override func viewDidLoad() {
         super.viewDidLoad()
+        
         navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+
+        // Uncomment the following line to preserve selection between presentations
+        // self.clearsSelectionOnViewWillAppear = false
+
+        // Uncomment the following line to display an Edit button in the navigation bar for this view controller.
+        // self.navigationItem.rightBarButtonItem = self.editButtonItem()
     }
 
     override func didReceiveMemoryWarning() {
@@ -24,12 +31,12 @@ class FindPasswordPhoneNumberTableViewController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 2
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 1
+        return 2
     }
     
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
@@ -37,9 +44,8 @@ class FindPasswordPhoneNumberTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0.0001
+        return 4
     }
-    
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

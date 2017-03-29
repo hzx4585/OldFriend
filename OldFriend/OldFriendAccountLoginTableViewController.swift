@@ -15,9 +15,19 @@ class OldFriendAccountLoginTableViewController: UITableViewController {
     @IBAction func HideTextFieldButton(_ sender: UIButton) {
         passWord.isSecureTextEntry = !passWord.isSecureTextEntry
     }
+    @IBAction func forgetPasswordButtonTapped(_ sender: UIButton) {
+        let vc = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "FindPasswordPhoneNumberTableViewController")
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    override func viewDidLoad() {
+        let dict:NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
+        //let dict:NSDictionary = [NSForegroundColorAttributeName: UIColor.white,NSFontAttributeName : UIFont.boldSystemFont(ofSize: 18)]
+        self.navigationController?.navigationBar.titleTextAttributes = dict as? [String : AnyObject]
+    }
     
     override func viewDidLayoutSubviews() {
-        passWord.isSecureTextEntry = true
+        passWord.isSecureTextEntry = false
         super.viewDidLayoutSubviews()
         
         let navigationHeight = topLayoutGuide.length

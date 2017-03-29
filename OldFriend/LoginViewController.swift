@@ -21,12 +21,14 @@ class LoginViewController: UIViewController {
         tc.tabItems = [(vc1, "账号密码登录"), (vc2, "手机快捷登录")]
         var option = TabPageOption()
         option.tabWidth = view.frame.width / CGFloat(tc.tabItems.count)
+        option.tabBackgroundColor = UIColor(red: 242.0/255.0, green:
+            116.0/255.0, blue: 119.0/255.0, alpha: 1.0)
+        option.currentColor = UIColor.white
         tc.option = option
         navigationController?.pushViewController(tc, animated: true)
         tc.navigationItem.rightBarButtonItem = signUpButton
         navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         tc.title = "老友账号登录"
-
     }
     
     func signUpButtonTapped() {
