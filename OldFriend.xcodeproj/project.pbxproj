@@ -16,6 +16,7 @@
 		1FD36A4F1E826F08003A4734 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD36A4E1E826F08003A4734 /* LoginViewController.swift */; };
 		1FD36A5B1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD36A5A1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift */; };
 		1FD36A5D1E84C2BB003A4734 /* MobileLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD36A5C1E84C2BB003A4734 /* MobileLoginViewController.swift */; };
+		1FECF7931E8B59B600A4B2F4 /* FindPasswordPhoneNumberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FECF7921E8B59B600A4B2F4 /* FindPasswordPhoneNumberTableViewController.swift */; };
 		A4B237974A4D982CD4C88BFF /* Pods_OldFriend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B4E6AAB0D4F57128B774D0 /* Pods_OldFriend.framework */; };
 /* End PBXBuildFile section */
 
@@ -31,6 +32,7 @@
 		1FD36A4E1E826F08003A4734 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1FD36A5A1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldFriendAccountLoginTableViewController.swift; sourceTree = "<group>"; };
 		1FD36A5C1E84C2BB003A4734 /* MobileLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileLoginViewController.swift; sourceTree = "<group>"; };
+		1FECF7921E8B59B600A4B2F4 /* FindPasswordPhoneNumberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPasswordPhoneNumberTableViewController.swift; sourceTree = "<group>"; };
 		5D9E047D46F1FA08BAD19F88 /* Pods-OldFriend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OldFriend.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OldFriend/Pods-OldFriend.debug.xcconfig"; sourceTree = "<group>"; };
 		70B4E6AAB0D4F57128B774D0 /* Pods_OldFriend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OldFriend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7546B3A4DFC159B13F4C1252 /* Pods-OldFriend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OldFriend.release.xcconfig"; path = "Pods/Target Support Files/Pods-OldFriend/Pods-OldFriend.release.xcconfig"; sourceTree = "<group>"; };
@@ -73,9 +75,10 @@
 				1FD36A4E1E826F08003A4734 /* LoginViewController.swift */,
 				1FD36A5A1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift */,
 				1FD36A5C1E84C2BB003A4734 /* MobileLoginViewController.swift */,
-				1FD36A3E1E826EA1003A4734 /* Main.storyboard */,
 				1F3E77171E89FDA80016F90C /* InputVerificationCodeTableViewController.swift */,
 				1F25AA501E85185D00AED35E /* SignUpTableViewController.swift */,
+				1FD36A3E1E826EA1003A4734 /* Main.storyboard */,
+				1FECF7941E8B59BD00A4B2F4 /* FindPassword */,
 			);
 			path = OldFriend;
 			sourceTree = "<group>";
@@ -89,6 +92,14 @@
 				1FD36A461E826EA1003A4734 /* Info.plist */,
 			);
 			name = SupportingFiles;
+			sourceTree = "<group>";
+		};
+		1FECF7941E8B59BD00A4B2F4 /* FindPassword */ = {
+			isa = PBXGroup;
+			children = (
+				1FECF7921E8B59B600A4B2F4 /* FindPasswordPhoneNumberTableViewController.swift */,
+			);
+			name = FindPassword;
 			sourceTree = "<group>";
 		};
 		21E64AE0C2477BC68BCDF75A /* Frameworks */ = {
@@ -235,6 +246,7 @@
 				1F3E77181E89FDA80016F90C /* InputVerificationCodeTableViewController.swift in Sources */,
 				1F25AA511E85185D00AED35E /* SignUpTableViewController.swift in Sources */,
 				1FD36A4F1E826F08003A4734 /* LoginViewController.swift in Sources */,
+				1FECF7931E8B59B600A4B2F4 /* FindPasswordPhoneNumberTableViewController.swift in Sources */,
 				1FD36A5B1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift in Sources */,
 				1FD36A3B1E826EA1003A4734 /* AppDelegate.swift in Sources */,
 				1FD36A5D1E84C2BB003A4734 /* MobileLoginViewController.swift in Sources */,
