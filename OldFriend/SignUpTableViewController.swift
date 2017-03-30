@@ -12,22 +12,23 @@ class SignUpTableViewController: UITableViewController {
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
     @IBAction func getVerificationCode(_ sender: UIButton) {
-        if (checkMobilephoneNumber(phoneNumber: phoneNumberTextField.text!)) {
+        if (check(phoneNumber: phoneNumberTextField.text!)) {
             self.performSegue(withIdentifier: "getVerificaionCodeSegue", sender: self)
         }
+        else {
+            let alertController = UIAlertController(title: "",
+                                                    message: "请输入正确的手机号", preferredStyle: .alert)
+            let okAction = UIAlertAction(title: "知道了", style: .default, handler: nil)
+            alertController.addAction(okAction)
+            self.present(alertController, animated: true, completion: nil)
+        }
     }
-    
-    private func checkMobilephoneNumber(phoneNumber:String) -> Bool{
-        let result = true
-        return result
-    }
-    
+
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "getVerificaionCodeSegue" {
             let destinationController = segue.destination as! InputVerificationCodeTableViewController
             print("phoneNumber: " + phoneNumberTextField.text!)
             if let phoneNumber = phoneNumberTextField.text {
-                //destinationController.messageLabel.text = phoneNumber
                 destinationController.setValue(phoneNumber, forKey: "phoneNumber")
             }
         }
@@ -35,8 +36,7 @@ class SignUpTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        phoneNumberTextField.placeholder = "请输入手机号"
-        phoneNumberTextField.keyboardType = UIKeyboardType.numberPad
+        //phoneNumberTextField.keyboardType = UIKeyboardType.numberPad
         navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     
@@ -51,13 +51,6 @@ class SignUpTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.00001
     }
-    
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
-    }
-
-    // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
