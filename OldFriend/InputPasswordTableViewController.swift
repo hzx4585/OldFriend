@@ -1,19 +1,17 @@
 //
-//  VerificationTableViewController.swift
-//  OldFriend
+//  InputPasswordTableViewController.swift
+//  
 //
-//  Created by 黄之信 on 17/3/29.
-//  Copyright © 2017年 MichaelHuang. All rights reserved.
+//  Created by 黄之信 on 17/3/30.
+//
 //
 
 import UIKit
 
-class VerificationTableViewController: UITableViewController {
+class InputPasswordTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
@@ -46,6 +44,7 @@ class VerificationTableViewController: UITableViewController {
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 0.00001
     }
+
 
     /*
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {

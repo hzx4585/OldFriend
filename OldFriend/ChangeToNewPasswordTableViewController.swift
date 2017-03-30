@@ -1,19 +1,17 @@
 //
-//  VerificationTableViewController.swift
+//  ChangeToNewPasswordTableViewController.swift
 //  OldFriend
 //
-//  Created by 黄之信 on 17/3/29.
+//  Created by 黄之信 on 17/3/30.
 //  Copyright © 2017年 MichaelHuang. All rights reserved.
 //
 
 import UIKit
 
-class VerificationTableViewController: UITableViewController {
+class ChangeToNewPasswordTableViewController: UITableViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
 
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false

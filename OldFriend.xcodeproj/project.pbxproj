@@ -10,6 +10,8 @@
 		1F25AA511E85185D00AED35E /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25AA501E85185D00AED35E /* SignUpTableViewController.swift */; };
 		1F326E9A1E8BF3E9004A7CB5 /* VerificationTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F326E991E8BF3E9004A7CB5 /* VerificationTableViewController.swift */; };
 		1F3E77181E89FDA80016F90C /* InputVerificationCodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F3E77171E89FDA80016F90C /* InputVerificationCodeTableViewController.swift */; };
+		1F43327D1E8CAC9600E56F86 /* InputPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F43327C1E8CAC9600E56F86 /* InputPasswordTableViewController.swift */; };
+		1F43327F1E8CB12900E56F86 /* ChangeToNewPasswordTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F43327E1E8CB12900E56F86 /* ChangeToNewPasswordTableViewController.swift */; };
 		1FD36A3B1E826EA1003A4734 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD36A3A1E826EA1003A4734 /* AppDelegate.swift */; };
 		1FD36A401E826EA1003A4734 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1FD36A3E1E826EA1003A4734 /* Main.storyboard */; };
 		1FD36A421E826EA1003A4734 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1FD36A411E826EA1003A4734 /* Assets.xcassets */; };
@@ -25,6 +27,8 @@
 		1F25AA501E85185D00AED35E /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
 		1F326E991E8BF3E9004A7CB5 /* VerificationTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = VerificationTableViewController.swift; sourceTree = "<group>"; };
 		1F3E77171E89FDA80016F90C /* InputVerificationCodeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputVerificationCodeTableViewController.swift; sourceTree = "<group>"; };
+		1F43327C1E8CAC9600E56F86 /* InputPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputPasswordTableViewController.swift; sourceTree = "<group>"; };
+		1F43327E1E8CB12900E56F86 /* ChangeToNewPasswordTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ChangeToNewPasswordTableViewController.swift; sourceTree = "<group>"; };
 		1FD36A371E826EA1003A4734 /* OldFriend.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = OldFriend.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1FD36A3A1E826EA1003A4734 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1FD36A3F1E826EA1003A4734 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
@@ -55,6 +59,7 @@
 		1F4332791E8C992800E56F86 /* Register */ = {
 			isa = PBXGroup;
 			children = (
+				1F43327C1E8CAC9600E56F86 /* InputPasswordTableViewController.swift */,
 				1F3E77171E89FDA80016F90C /* InputVerificationCodeTableViewController.swift */,
 				1F25AA501E85185D00AED35E /* SignUpTableViewController.swift */,
 			);
@@ -107,6 +112,7 @@
 		1FECF7941E8B59BD00A4B2F4 /* FindPassword */ = {
 			isa = PBXGroup;
 			children = (
+				1F43327E1E8CB12900E56F86 /* ChangeToNewPasswordTableViewController.swift */,
 				1F326E991E8BF3E9004A7CB5 /* VerificationTableViewController.swift */,
 				1FECF7921E8B59B600A4B2F4 /* FindPasswordPhoneNumberTableViewController.swift */,
 			);
@@ -260,7 +266,9 @@
 				1FD36A4F1E826F08003A4734 /* LoginViewController.swift in Sources */,
 				1FECF7931E8B59B600A4B2F4 /* FindPasswordPhoneNumberTableViewController.swift in Sources */,
 				1FD36A5B1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift in Sources */,
+				1F43327F1E8CB12900E56F86 /* ChangeToNewPasswordTableViewController.swift in Sources */,
 				1FD36A3B1E826EA1003A4734 /* AppDelegate.swift in Sources */,
+				1F43327D1E8CAC9600E56F86 /* InputPasswordTableViewController.swift in Sources */,
 				1FD36A5D1E84C2BB003A4734 /* MobileLoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
