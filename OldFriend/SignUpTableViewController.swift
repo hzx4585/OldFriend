@@ -10,6 +10,7 @@ import UIKit
 
 class SignUpTableViewController: UITableViewController {
     @IBOutlet weak var phoneNumberTextField: UITextField!
+    
     @IBAction func getVerificationCode(_ sender: UIButton) {
         if (checkMobilephoneNumber(phoneNumber: phoneNumberTextField.text!)) {
             self.performSegue(withIdentifier: "getVerificaionCodeSegue", sender: self)
@@ -34,7 +35,8 @@ class SignUpTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        phoneNumberTextField.placeholder = "请输入手机号"
+        phoneNumberTextField.keyboardType = UIKeyboardType.numberPad
         navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     

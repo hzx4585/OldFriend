@@ -75,7 +75,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Cl3-wC-7Ca" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6646" y="150"/>
+            <point key="canvasLocation" x="5874" y="1567"/>
         </scene>
         <!--注册-->
         <scene sceneID="OyS-Oq-txb">
@@ -153,7 +153,7 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请输入您的手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="odG-bN-Bai">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="odG-bN-Bai">
                                                     <rect key="frame" x="8" y="8" width="359" height="27.5"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
@@ -241,7 +241,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2C-0p-pDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-255" y="895"/>
+            <point key="canvasLocation" x="3321" y="867"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0SF-WW-Bd7">
@@ -259,7 +259,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Htm-zi-TDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5772" y="150"/>
+            <point key="canvasLocation" x="5015" y="1568"/>
         </scene>
         <!--Old Friend Account Login Table View Controller-->
         <scene sceneID="7Dp-hW-rlZ">
@@ -792,7 +792,7 @@
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="FXg-ei-zZg" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1060" y="895"/>
+            <point key="canvasLocation" x="2537" y="867"/>
         </scene>
         <!--注册-->
         <scene sceneID="CHq-nr-Gnz">
@@ -963,7 +963,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JW7-NW-llc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="581.60000000000002" y="894.60269865067471"/>
+            <point key="canvasLocation" x="4231" y="867"/>
         </scene>
         <!--注册-->
         <scene sceneID="E72-CM-IO4">
@@ -1147,7 +1147,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oby-t0-ViU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1393" y="895"/>
+            <point key="canvasLocation" x="5014" y="867"/>
         </scene>
         <!--找回登录密码-->
         <scene sceneID="Meo-9G-DwM">
@@ -1230,7 +1230,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="HJQ-Rf-t9T" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4999.1999999999998" y="868.51574212893559"/>
+            <point key="canvasLocation" x="2537" y="1585"/>
         </scene>
         <!--短信验证-->
         <scene sceneID="IBu-O6-oFm">
@@ -1415,7 +1415,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Il5-eL-6ZI" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="5772" y="868.51574212893559"/>
+            <point key="canvasLocation" x="3321" y="1585"/>
         </scene>
         <!--设置密码-->
         <scene sceneID="ngO-ag-cUC">
@@ -1589,7 +1589,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n7i-ax-Mh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="6647" y="869"/>
+            <point key="canvasLocation" x="4230" y="1585"/>
         </scene>
     </scenes>
     <resources>
