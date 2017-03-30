@@ -43,11 +43,11 @@ class SignUpTableViewController: UITableViewController {
     }
     
     override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-        return 0.1
+        return 12
     }
 
     override func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        return 9
+        return 0.00001
     }
     
     override func didReceiveMemoryWarning() {

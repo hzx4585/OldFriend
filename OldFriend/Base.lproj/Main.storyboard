@@ -113,7 +113,7 @@
                                                                 <constraint firstAttribute="width" constant="125" id="TKe-PO-rkG"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;   3.设置密码" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="H7L-t9-Gw6">
@@ -122,7 +122,7 @@
                                                                 <constraint firstAttribute="width" constant="112" id="Thj-Hc-yeB"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="&gt;" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yYw-ia-rmK">
@@ -131,7 +131,7 @@
                                                                 <constraint firstAttribute="width" constant="11" id="F0G-5x-jUc"/>
                                                             </constraints>
                                                             <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                            <nil key="textColor"/>
+                                                            <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                     </subviews>
@@ -158,7 +158,7 @@
                                             <subviews>
                                                 <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请输入您的手机号码" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="odG-bN-Bai">
                                                     <rect key="frame" x="8" y="8" width="359" height="27.5"/>
-                                                    <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                    <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                                                     <textInputTraits key="textInputTraits"/>
                                                 </textField>
@@ -179,12 +179,15 @@
                                         <rect key="frame" x="0.0" y="195" width="375" height="88"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="C0S-hD-1JH" id="XMq-d2-fb9">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="87"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XOI-Ct-TuT">
-                                                    <rect key="frame" x="8" y="8" width="359" height="30"/>
+                                                    <rect key="frame" x="8" y="8" width="359" height="45"/>
                                                     <color key="backgroundColor" red="0.94117647059999998" green="0.4549019608" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <constraints>
+                                                        <constraint firstAttribute="height" constant="45" id="HNn-ch-0aN"/>
+                                                    </constraints>
                                                     <state key="normal" title="获取验证码">
                                                         <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
@@ -198,37 +201,33 @@
                                                         <segue destination="zRy-wL-kTI" kind="show" identifier="getVerificaionCodeSegue" id="sEZ-9x-EFu"/>
                                                     </connections>
                                                 </button>
-                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="Xma-WT-CSM">
-                                                    <rect key="frame" x="8" y="46" width="165" height="13.5"/>
+                                                <stackView opaque="NO" contentMode="scaleToFill" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="uOb-9I-T8H">
+                                                    <rect key="frame" x="8" y="66" width="165" height="13.5"/>
                                                     <subviews>
-                                                        <stackView opaque="NO" contentMode="scaleToFill" spacing="-4" translatesAutoresizingMaskIntoConstraints="NO" id="uOb-9I-T8H">
-                                                            <rect key="frame" x="0.0" y="0.0" width="165" height="13.5"/>
-                                                            <subviews>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我已阅读并同意" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg0-yk-gwq">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="79" height="13.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                    <nil key="textColor"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="《老友用户协议》" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fa-wO-2Sd">
-                                                                    <rect key="frame" x="75" y="0.0" width="90" height="13.5"/>
-                                                                    <fontDescription key="fontDescription" type="system" pointSize="11"/>
-                                                                    <color key="textColor" red="0.94117647059999998" green="0.4549019608" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                    <nil key="highlightedColor"/>
-                                                                </label>
-                                                            </subviews>
-                                                        </stackView>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我已阅读并同意" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="pg0-yk-gwq">
+                                                            <rect key="frame" x="0.0" y="0.0" width="79" height="13.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="《老友用户协议》" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Fa-wO-2Sd">
+                                                            <rect key="frame" x="75" y="0.0" width="90" height="13.5"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                                            <color key="textColor" red="0.94117647059999998" green="0.4549019608" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                            <nil key="highlightedColor"/>
+                                                        </label>
                                                     </subviews>
                                                 </stackView>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstAttribute="trailingMargin" secondItem="XOI-Ct-TuT" secondAttribute="trailing" id="5kq-c9-AKZ"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="Xma-WT-CSM" secondAttribute="leading" id="K9z-Kv-mq4"/>
-                                                <constraint firstAttribute="leadingMargin" secondItem="XOI-Ct-TuT" secondAttribute="leading" id="aZE-Nt-bfG"/>
-                                                <constraint firstItem="Xma-WT-CSM" firstAttribute="top" secondItem="XOI-Ct-TuT" secondAttribute="bottom" constant="8" id="fFX-hC-YYq"/>
-                                                <constraint firstAttribute="topMargin" secondItem="XOI-Ct-TuT" secondAttribute="top" id="jgP-Fu-NFH"/>
+                                                <constraint firstAttribute="leadingMargin" secondItem="uOb-9I-T8H" secondAttribute="leading" id="5wV-Um-CVU"/>
+                                                <constraint firstItem="XOI-Ct-TuT" firstAttribute="trailing" secondItem="XMq-d2-fb9" secondAttribute="trailingMargin" id="Ogj-bH-ULH"/>
+                                                <constraint firstItem="XOI-Ct-TuT" firstAttribute="top" secondItem="XMq-d2-fb9" secondAttribute="topMargin" id="lB4-TS-veN"/>
+                                                <constraint firstItem="uOb-9I-T8H" firstAttribute="top" secondItem="XOI-Ct-TuT" secondAttribute="bottom" constant="13" id="paT-rM-LQt"/>
+                                                <constraint firstItem="XOI-Ct-TuT" firstAttribute="leading" secondItem="uOb-9I-T8H" secondAttribute="leading" id="srK-ex-9yP"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" cocoaTouchSystemColor="groupTableViewBackgroundColor"/>
                                     </tableViewCell>
                                 </cells>
                             </tableViewSection>
@@ -245,12 +244,11 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Z2C-0p-pDy" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-249" y="895"/>
+            <point key="canvasLocation" x="-250.40000000000001" y="894.60269865067471"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="0SF-WW-Bd7">
             <objects>
-                <placeholder placeholderIdentifier="IBFirstResponder" id="Htm-zi-TDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
                 <navigationController automaticallyAdjustsScrollViewInsets="NO" id="JZU-Gq-Aue" sceneMemberID="viewController">
                     <toolbarItems/>
                     <navigationBar key="navigationBar" contentMode="scaleToFill" id="5r1-sU-nf3">
@@ -262,6 +260,7 @@
                         <segue destination="iym-I6-tSv" kind="relationship" relationship="rootViewController" id="OQD-Y2-1LZ"/>
                     </connections>
                 </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Htm-zi-TDj" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="-63" y="-47"/>
         </scene>
@@ -377,7 +376,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="IGe-hL-Ifb">
-                                                    <rect key="frame" x="8" y="18.5" width="359" height="18"/>
+                                                    <rect key="frame" x="8" y="19" width="359" height="18"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="账号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="TNe-xx-G1R">
                                                             <rect key="frame" x="0.0" y="0.0" width="31" height="18"/>
@@ -474,7 +473,7 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bil-aD-2ge">
                                                     <rect key="frame" x="156" y="65" width="62" height="30"/>
                                                     <state key="normal" title="忘记密码">
-                                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                     <connections>
                                                         <action selector="forgetPasswordButtonTapped:" destination="W7E-lG-jQh" eventType="touchUpInside" id="Oru-No-bgl"/>
@@ -608,13 +607,13 @@
                                                     <rect key="frame" x="8" y="12" width="359" height="30"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AO9-NT-QUF">
-                                                            <rect key="frame" x="0.0" y="0.0" width="52" height="30"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="30"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="M6U-ab-GY7">
-                                                            <rect key="frame" x="61" y="0.0" width="207" height="30"/>
+                                                            <rect key="frame" x="55" y="0.0" width="213" height="30"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -647,16 +646,16 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <stackView opaque="NO" contentMode="scaleToFill" spacing="9" translatesAutoresizingMaskIntoConstraints="NO" id="3br-jx-gH7">
-                                                    <rect key="frame" x="8" y="17" width="359" height="20.5"/>
+                                                    <rect key="frame" x="8" y="18.5" width="359" height="18"/>
                                                     <subviews>
                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="验证码" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="MGd-Bn-eug">
-                                                            <rect key="frame" x="0.0" y="0.0" width="52" height="20.5"/>
-                                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="46" height="18"/>
+                                                            <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                             <nil key="textColor"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
                                                         <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WxV-Gc-W1L">
-                                                            <rect key="frame" x="61" y="0.0" width="298" height="20.5"/>
+                                                            <rect key="frame" x="55" y="0.0" width="304" height="18"/>
                                                             <nil key="textColor"/>
                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                             <textInputTraits key="textInputTraits"/>
@@ -695,13 +694,13 @@
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZfY-XE-bLz">
                                                     <rect key="frame" x="305" y="65" width="62" height="30"/>
                                                     <state key="normal" title="忘记密码">
-                                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtY-vS-q0E">
                                                     <rect key="frame" x="8" y="65" width="92" height="30"/>
                                                     <state key="normal" title="登陆即为同意">
-                                                        <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                                                        <color key="titleColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     </state>
                                                 </button>
                                             </subviews>
@@ -860,15 +859,15 @@
                             </tableViewSection>
                             <tableViewSection id="Y8x-EJ-SkT">
                                 <cells>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="30" id="LOy-gd-yyw">
-                                        <rect key="frame" x="0.0" y="115" width="375" height="30"/>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="24" id="LOy-gd-yyw">
+                                        <rect key="frame" x="0.0" y="115" width="375" height="24"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="LOy-gd-yyw" id="5Bt-DL-1NV">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="30"/>
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="23"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="手机号" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="x7u-Cc-HJD">
-                                                    <rect key="frame" x="70" y="4" width="297" height="21"/>
+                                                    <rect key="frame" x="70" y="4" width="297" height="16.5"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="11"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <nil key="highlightedColor"/>
@@ -888,7 +887,7 @@
                             <tableViewSection id="6d4-ej-bwJ">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="2Gq-38-E4f">
-                                        <rect key="frame" x="0.0" y="181" width="375" height="44"/>
+                                        <rect key="frame" x="0.0" y="175" width="375" height="44"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="2Gq-38-E4f" id="tCS-KV-Enz">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
@@ -914,7 +913,7 @@
                             <tableViewSection id="goF-ce-Yk8">
                                 <cells>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="70" id="YNa-mG-F86">
-                                        <rect key="frame" x="0.0" y="261" width="375" height="70"/>
+                                        <rect key="frame" x="0.0" y="255" width="375" height="70"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="YNa-mG-F86" id="3TW-hE-rlX">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="70"/>
@@ -1560,7 +1559,7 @@
         <image name="favorite" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="957-uU-02y"/>
         <segue reference="Bqp-n8-uQV"/>
-        <segue reference="Ytu-eV-CmT"/>
     </inferredMetricsTieBreakers>
 </document>
