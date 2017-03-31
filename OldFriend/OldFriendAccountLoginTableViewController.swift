@@ -22,7 +22,6 @@ class OldFriendAccountLoginTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         let dict:NSDictionary = [NSForegroundColorAttributeName: UIColor.white]
-        //let dict:NSDictionary = [NSForegroundColorAttributeName: UIColor.white,NSFontAttributeName : UIFont.boldSystemFont(ofSize: 18)]
         self.navigationController?.navigationBar.titleTextAttributes = dict as? [String : AnyObject]
     }
     

@@ -11,7 +11,6 @@ import TabPageViewController
 
 class LoginViewController: UIViewController {
     @IBOutlet weak var OldFriendLogo: UIImageView!
-
     @IBAction func OldFriendAccountLoginButton(_ sender: UIButton) {
         let signUpButton = UIBarButtonItem(title: "注册", style: .plain, target: self, action: #selector(signUpButtonTapped))
         let tc = TabPageViewController.create()

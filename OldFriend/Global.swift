@@ -7,7 +7,6 @@
 //
 
 import Foundation
-import UIKit
 
 // 检测手机号
 func check(phoneNumber: String) -> Bool {
@@ -26,4 +25,8 @@ func check(phoneNumber: String) -> Bool {
 // 发送验证码
 func sendVerificationCode() {
     print("发送验证码")
+}
+
+func checkTwoPasswordWhetherSame(firstPassword: String, secondPassword: String) -> Bool {
+    return (firstPassword == secondPassword)
 }

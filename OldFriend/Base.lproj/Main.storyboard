@@ -1063,11 +1063,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请输入6-16位数字或字母" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HuZ-eu-B7S">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请输入6-16位数字或字母" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="HuZ-eu-B7S">
                                                     <rect key="frame" x="8" y="8" width="359" height="28"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1085,11 +1085,11 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="请再次输入6-16位数字或字母" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zyG-6I-5ti">
+                                                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="请再次输入6-16位数字或字母" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="zyG-6I-5ti">
                                                     <rect key="frame" x="8" y="8" width="359" height="28"/>
                                                     <color key="textColor" white="0.66666666666666663" alpha="1" colorSpace="calibratedWhite"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                                                    <textInputTraits key="textInputTraits"/>
+                                                    <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                                 </textField>
                                             </subviews>
                                             <constraints>
@@ -1123,7 +1123,8 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <segue destination="JZU-Gq-Aue" kind="showDetail" id="KqR-lQ-6hy"/>
+                                                        <action selector="registerButtonTapped:" destination="E7d-eb-BwF" eventType="touchUpInside" id="TSO-rI-6jR"/>
+                                                        <segue destination="JZU-Gq-Aue" kind="showDetail" identifier="registerFinalSegue" id="KqR-lQ-6hy"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1154,6 +1155,10 @@
                         </connections>
                     </tableView>
                     <navigationItem key="navigationItem" title="注册" id="aIL-Fn-uLh"/>
+                    <connections>
+                        <outlet property="firstPasswordField" destination="HuZ-eu-B7S" id="UQS-l2-naG"/>
+                        <outlet property="secondPasswordField" destination="zyG-6I-5ti" id="bWW-c0-VbN"/>
+                    </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Oby-t0-ViU" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
@@ -1599,7 +1604,7 @@
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="n7i-ax-Mh8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="4230" y="1585"/>
+            <point key="canvasLocation" x="4230" y="1567"/>
         </scene>
     </scenes>
     <resources>
