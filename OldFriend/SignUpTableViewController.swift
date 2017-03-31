@@ -36,7 +36,8 @@ class SignUpTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        //phoneNumberTextField.keyboardType = UIKeyboardType.numberPad
+        
+        self.tableView.isScrollEnabled = false
         navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }
     

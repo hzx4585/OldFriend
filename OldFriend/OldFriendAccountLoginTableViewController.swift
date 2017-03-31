@@ -26,9 +26,9 @@ class OldFriendAccountLoginTableViewController: UITableViewController {
     }
     
     override func viewDidLayoutSubviews() {
-        passWord.isSecureTextEntry = false
         super.viewDidLayoutSubviews()
-        
+        passWord.isSecureTextEntry = false
+        self.tableView.isScrollEnabled = false
         let navigationHeight = topLayoutGuide.length
         tableView.contentInset.top = navigationHeight + TabPageOption().tabHeight
         // 这段代码相当于把表格移到合适位置

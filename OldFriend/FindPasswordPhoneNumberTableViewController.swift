@@ -13,6 +13,7 @@ class FindPasswordPhoneNumberTableViewController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
+        self.tableView.isScrollEnabled = false
     }
 
     override func didReceiveMemoryWarning() {

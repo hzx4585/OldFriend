@@ -18,6 +18,7 @@ class InputVerificationCodeTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        self.tableView.isScrollEnabled = false
         navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
         timeButton.isEnabled = false
         timeButton.title = "60s后重新发送"

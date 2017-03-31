@@ -12,14 +12,10 @@ import TabPageViewController
 class MobileLoginViewController: UITableViewController {
     @IBOutlet weak var LoginButton: UIButton!
     override func viewDidLayoutSubviews() {
-    super.viewDidLayoutSubviews()
-    
-    LoginButton.layer.cornerRadius = 3.0
-    
-    let navigationHeight = topLayoutGuide.length
-    tableView.contentInset.top = navigationHeight + TabPageOption().tabHeight
-    
-        
+        super.viewDidLayoutSubviews()
+        self.tableView.isScrollEnabled = false
+        LoginButton.layer.cornerRadius = 3.0
+        let navigationHeight = topLayoutGuide.length
+        tableView.contentInset.top = navigationHeight + TabPageOption().tabHeight
     }
-
 }
