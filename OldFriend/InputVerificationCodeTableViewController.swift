@@ -36,7 +36,7 @@ class InputVerificationCodeTableViewController: UITableViewController {
         timeButton.isEnabled = false
         Counter = 60
         if (status) {
-            sendVerificationCode()
+            sendVerificationCode(phoneNumber: Int(phoneNumber)!)
             Timer.invalidate()
             starTimer()
         }

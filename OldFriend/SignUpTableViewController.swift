@@ -14,6 +14,7 @@ class SignUpTableViewController: UITableViewController {
     @IBAction func getVerificationCode(_ sender: UIButton) {
         if (check(phoneNumber: phoneNumberTextField.text!)) {
             self.performSegue(withIdentifier: "getVerificaionCodeSegue", sender: self)
+            sendVerificationCode(phoneNumber: Int(phoneNumberTextField.text!)!)
         }
         else {
             let alertController = UIAlertController(title: "",
@@ -36,7 +37,6 @@ class SignUpTableViewController: UITableViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         self.tableView.isScrollEnabled = false
         navigationController?.navigationBar.topItem?.backBarButtonItem = UIBarButtonItem(title: "", style: .plain, target: nil, action: nil)
     }

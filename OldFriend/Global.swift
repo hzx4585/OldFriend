@@ -23,8 +23,26 @@ func check(phoneNumber: String) -> Bool {
 }
 
 // 发送验证码
-func sendVerificationCode() {
+func sendVerificationCode(phoneNumber: Int) {
     print("发送验证码")
+    let globalQueue = DispatchQueue.global()
+    globalQueue.async {
+        let url: NSURL = NSURL(string: "http://180.76.173.200:9999/regist/verification-send.do?phone=\(phoneNumber)")!
+        let request: URLRequest = URLRequest(url: url as URL)
+        let session: URLSession = URLSession.shared
+        let dataTask: URLSessionDataTask = session.dataTask(with: request, completionHandler: { (data, reponse, error) in
+            if (error == nil) {
+                var dict:NSDictionary? = nil
+                do {
+                    dict  = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.init(rawValue: 0)) as? NSDictionary
+                } catch {
+                    
+                }
+                print(dict ?? "no value")
+            }
+        })
+        dataTask.resume()
+    }
 }
 
 func checkTwoPasswordWhetherSame(firstPassword: String, secondPassword: String) -> Bool {
