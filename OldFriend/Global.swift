@@ -27,7 +27,8 @@ func sendVerificationCode(phoneNumber: Int) -> Int{
     var result = 1
     print("发送验证码")
     let globalQueue = DispatchQueue.global()
-    globalQueue.sync {
+    let semaphore = DispatchSemaphore(value: 0)
+    globalQueue.async {
         let url: NSURL = NSURL(string: "http://180.76.173.200:9999/regist/verification-send.do?phone=\(phoneNumber)")!
         let request: URLRequest = URLRequest(url: url as URL)
         let session: URLSession = URLSession.shared
@@ -41,19 +42,21 @@ func sendVerificationCode(phoneNumber: Int) -> Int{
                 }
                 print(dict ?? "no value")
                 result = dict?["ret"] as! Int
-                print("#########")
-                print(dict?["ret"] as! Int)
-                print("#########")
             }
+            else {
+                print(error)
+            }
+            semaphore.signal()
         })
         dataTask.resume()
     }
-    print ("yyyyyy")
-    print (result)
-    print ("yyyyyy")
+    _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+//    print("result%%%%%%%")
+//    print(result)
     return result
 }
 
+// 检测两次密码是否相同
 func checkTwoPasswordWhetherSame(firstPassword: String, secondPassword: String) -> Bool {
     return (firstPassword == secondPassword)
 }

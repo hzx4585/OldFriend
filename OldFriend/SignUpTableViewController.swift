@@ -12,15 +12,13 @@ class SignUpTableViewController: UITableViewController {
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
     @IBAction func getVerificationCode(_ sender: UIButton) {
-        var result = 1
         if (check(phoneNumber: phoneNumberTextField.text!)) {
-            result = sendVerificationCode(phoneNumber: Int(phoneNumberTextField.text!)!)
-            print(result)
-            if (result == 0) {
+            var result = sendVerificationCode(phoneNumber: Int(phoneNumberTextField.text!)!)
+            switch result {
+            case 0:
                 self.performSegue(withIdentifier: "getVerificaionCodeSegue", sender: self)
-            }
-            else {
-                print("Somethong wrong")
+            default:
+                print("something wrong")
             }
         }
         else {

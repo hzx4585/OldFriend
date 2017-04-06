@@ -9,7 +9,6 @@
 import UIKit
 
 class InputPasswordTableViewController: UITableViewController {
-
     @IBOutlet weak var firstPasswordField: UITextField!
     @IBOutlet weak var secondPasswordField: UITextField!
     
