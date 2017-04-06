@@ -120,7 +120,7 @@ func setPasswordForRegister(firstPassword: String, secondPassword: String) -> In
             //说明：（此处返回的数据是JSON格式的，因此使用NSJSONSerialization进行反序列化处理）
             var dict:NSDictionary? = nil
             do {
-                dict  = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.init(rawValue: 0)) as! NSDictionary
+                dict  = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.init(rawValue: 0)) as? NSDictionary
             } catch {
                 
             }
@@ -128,7 +128,7 @@ func setPasswordForRegister(firstPassword: String, secondPassword: String) -> In
             result = dict?["ret"] as! Int
         }
         else {
-            print(error)
+            print(error!)
         }
         semaphore.signal()
     }
@@ -136,6 +136,37 @@ func setPasswordForRegister(firstPassword: String, secondPassword: String) -> In
     dataTask.resume()
     _ = semaphore.wait(timeout: DispatchTime.distantFuture)
     return result
+}
+
+// 登录
+func login(phone: String, password: String) -> NSDictionary {
+    var result: NSDictionary = [:]
+    let globalQueue = DispatchQueue.global()
+    let semaphore = DispatchSemaphore(value: 0)
+    globalQueue.async {
+        let url: NSURL = NSURL(string: "http://180.76.173.200:9999/login/login.do?phone=\(phone)&password=\(password)")!
+        let request: URLRequest = URLRequest(url: url as URL)
+        let session: URLSession = URLSession.shared
+        let dataTask: URLSessionDataTask = session.dataTask(with: request, completionHandler: { (data, reponse, error) in
+            if (error == nil) {
+                var dict:NSDictionary? = nil
+                do {
+                    dict  = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.init(rawValue: 0)) as? NSDictionary
+                } catch {
+                    
+                }
+                print(dict ?? "no value")
+                result = dict!
+            }
+            else {
+                print(error!)
+            }
+            semaphore.signal()
+        })
+        dataTask.resume()
+    }
+    _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+    return result as NSDictionary
 }
 
 // 检测两次密码是否相同
