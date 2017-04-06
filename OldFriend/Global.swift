@@ -23,10 +23,11 @@ func check(phoneNumber: String) -> Bool {
 }
 
 // 发送验证码
-func sendVerificationCode(phoneNumber: Int) {
+func sendVerificationCode(phoneNumber: Int) -> Int{
+    var result = 1
     print("发送验证码")
     let globalQueue = DispatchQueue.global()
-    globalQueue.async {
+    globalQueue.sync {
         let url: NSURL = NSURL(string: "http://180.76.173.200:9999/regist/verification-send.do?phone=\(phoneNumber)")!
         let request: URLRequest = URLRequest(url: url as URL)
         let session: URLSession = URLSession.shared
@@ -39,10 +40,18 @@ func sendVerificationCode(phoneNumber: Int) {
                     
                 }
                 print(dict ?? "no value")
+                result = dict?["ret"] as! Int
+                print("#########")
+                print(dict?["ret"] as! Int)
+                print("#########")
             }
         })
         dataTask.resume()
     }
+    print ("yyyyyy")
+    print (result)
+    print ("yyyyyy")
+    return result
 }
 
 func checkTwoPasswordWhetherSame(firstPassword: String, secondPassword: String) -> Bool {

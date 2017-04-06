@@ -12,9 +12,16 @@ class SignUpTableViewController: UITableViewController {
     @IBOutlet weak var phoneNumberTextField: UITextField!
     
     @IBAction func getVerificationCode(_ sender: UIButton) {
+        var result = 1
         if (check(phoneNumber: phoneNumberTextField.text!)) {
-            self.performSegue(withIdentifier: "getVerificaionCodeSegue", sender: self)
-            sendVerificationCode(phoneNumber: Int(phoneNumberTextField.text!)!)
+            result = sendVerificationCode(phoneNumber: Int(phoneNumberTextField.text!)!)
+            print(result)
+            if (result == 0) {
+                self.performSegue(withIdentifier: "getVerificaionCodeSegue", sender: self)
+            }
+            else {
+                print("Somethong wrong")
+            }
         }
         else {
             let alertController = UIAlertController(title: "",
