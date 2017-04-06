@@ -23,8 +23,8 @@ func check(phoneNumber: String) -> Bool {
 }
 
 // 发送验证码
-func sendVerificationCode(phoneNumber: Int) -> Int{
-    var result = 1
+func sendVerificationCode(phoneNumber: Int) -> NSDictionary{
+    var result: NSDictionary = [:]
     print("发送验证码")
     let globalQueue = DispatchQueue.global()
     let semaphore = DispatchSemaphore(value: 0)
@@ -41,17 +41,17 @@ func sendVerificationCode(phoneNumber: Int) -> Int{
                     
                 }
                 print(dict ?? "no value")
-                result = dict?["ret"] as! Int
+                result = dict!
             }
             else {
-                print(error)
+                print(error!)
             }
             semaphore.signal()
         })
         dataTask.resume()
     }
     _ = semaphore.wait(timeout: DispatchTime.distantFuture)
-    return result
+    return result as NSDictionary
 }
 
 // 检测验证码

@@ -14,11 +14,20 @@ class SignUpTableViewController: UITableViewController {
     @IBAction func getVerificationCode(_ sender: UIButton) {
         if (check(phoneNumber: phoneNumberTextField.text!)) {
             let result = sendVerificationCode(phoneNumber: Int(phoneNumberTextField.text!)!)
-            switch result {
+            switch (result["ret"] as! Int) {
             case 0:
                 self.performSegue(withIdentifier: "getVerificaionCodeSegue", sender: self)
             default:
-                print("something wrong")
+                switch (result["error"] as! String) {
+                case "phone repeat":
+                    let alertController = UIAlertController(title: "",
+                                                            message: "手机号已经被注册", preferredStyle: .alert)
+                    let okAction = UIAlertAction(title: "知道了", style: .default, handler: nil)
+                    alertController.addAction(okAction)
+                    self.present(alertController, animated: true, completion: nil)
+                default:
+                    print("something wrong")
+                }
             }
         }
         else {
