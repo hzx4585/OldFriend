@@ -967,8 +967,9 @@
                     </navigationItem>
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                     <connections>
-                        <outlet property="messageLabel" destination="x7u-Cc-HJD" id="r1w-zu-ndd"/>
+                        <outlet property="messageLabel" destination="x7u-Cc-HJD" id="ir5-jo-8XG"/>
                         <outlet property="timeButton" destination="vAa-r9-FR5" id="XtA-5Y-h03"/>
+                        <outlet property="verificationCodeTextField" destination="dAd-zI-0ct" id="kxn-X5-2Xu"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="JW7-NW-llc" userLabel="First Responder" sceneMemberID="firstResponder"/>

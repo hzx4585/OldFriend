@@ -13,7 +13,7 @@ class SignUpTableViewController: UITableViewController {
     
     @IBAction func getVerificationCode(_ sender: UIButton) {
         if (check(phoneNumber: phoneNumberTextField.text!)) {
-            var result = sendVerificationCode(phoneNumber: Int(phoneNumberTextField.text!)!)
+            let result = sendVerificationCode(phoneNumber: Int(phoneNumberTextField.text!)!)
             switch result {
             case 0:
                 self.performSegue(withIdentifier: "getVerificaionCodeSegue", sender: self)

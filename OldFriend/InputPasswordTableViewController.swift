@@ -29,8 +29,12 @@ class InputPasswordTableViewController: UITableViewController {
             alertController.addAction(okAction)
             self.present(alertController, animated: true, completion: nil)
         }
-        if (result) {
+        let num = setPasswordForRegister(firstPassword: firstPasswordField.text!, secondPassword: secondPasswordField.text!)
+        if (num == 0) {
             self.performSegue(withIdentifier: "registerFinalSegue", sender: self)
+        }
+        else {
+            print("再次输入密码有问题")
         }
     }
     

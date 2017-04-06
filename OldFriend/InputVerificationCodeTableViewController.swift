@@ -9,12 +9,13 @@
 import UIKit
 
 class InputVerificationCodeTableViewController: UITableViewController {
+    @IBOutlet weak var verificationCodeTextField: UITextField!
     @IBOutlet weak var messageLabel: UILabel!
+    @IBOutlet weak var timeButton: UIBarButtonItem!
     private var status = false
     var Counter = 60
     var Timer = Foundation.Timer()
     var phoneNumber = ""
-    @IBOutlet weak var timeButton: UIBarButtonItem!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -36,7 +37,7 @@ class InputVerificationCodeTableViewController: UITableViewController {
         timeButton.isEnabled = false
         Counter = 60
         if (status) {
-            sendVerificationCode(phoneNumber: Int(phoneNumber)!)
+            let _ = sendVerificationCode(phoneNumber: Int(phoneNumber)!)
             Timer.invalidate()
             starTimer()
         }
@@ -55,9 +56,16 @@ class InputVerificationCodeTableViewController: UITableViewController {
     }
     
     private func checkVerificationCode() -> Bool{
-        return true
+        let result = checkVerificationCodeGolobal(verificationCode: verificationCodeTextField.text!)
+        switch result {
+        case 0:
+            return true
+        default:
+            return false
+        }
     }
     
+    // 提交验证码
     @IBAction func InputVerificationCodeButtonTapped(_ sender: UIButton) {
         if (checkVerificationCode()) {
             self.performSegue(withIdentifier: "inputVerificationCode", sender: self)
