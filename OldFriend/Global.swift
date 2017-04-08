@@ -9,6 +9,8 @@
 import Foundation
 
 // 检测手机号
+// true 手机号正确
+// false 手机号错误
 func check(phoneNumber: String) -> Bool {
     if phoneNumber.characters.count == 0 {
         return false
@@ -138,13 +140,76 @@ func setPasswordForRegister(firstPassword: String, secondPassword: String) -> In
     return result
 }
 
-// 登录
-func login(phone: String, password: String) -> NSDictionary {
+// 老友账号登录
+func oldFriendAccountLogin(phone: String, password: String) -> NSDictionary {
     var result: NSDictionary = [:]
     let globalQueue = DispatchQueue.global()
     let semaphore = DispatchSemaphore(value: 0)
     globalQueue.async {
         let url: NSURL = NSURL(string: "http://180.76.173.200:9999/login/login.do?phone=\(phone)&password=\(password)")!
+        let request: URLRequest = URLRequest(url: url as URL)
+        let session: URLSession = URLSession.shared
+        let dataTask: URLSessionDataTask = session.dataTask(with: request, completionHandler: { (data, reponse, error) in
+            if (error == nil) {
+                var dict:NSDictionary? = nil
+                do {
+                    dict  = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.init(rawValue: 0)) as? NSDictionary
+                } catch {
+                    
+                }
+                print(dict ?? "no value")
+                result = dict!
+            }
+            else {
+                print(error!)
+            }
+            semaphore.signal()
+        })
+        dataTask.resume()
+    }
+    _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+    return result as NSDictionary
+}
+
+// 手机号快捷登录发送验证码
+func mobileLoginSendVerificationCode(phone: String) -> NSDictionary {
+    var result: NSDictionary = [:]
+    let globalQueue = DispatchQueue.global()
+    let semaphore = DispatchSemaphore(value: 0)
+    globalQueue.async {
+        let url: NSURL = NSURL(string: "http://180.76.173.200:9999/regist/verification-send.do?phone=\(phone)")!
+        let request: URLRequest = URLRequest(url: url as URL)
+        let session: URLSession = URLSession.shared
+        let dataTask: URLSessionDataTask = session.dataTask(with: request, completionHandler: { (data, reponse, error) in
+            if (error == nil) {
+                var dict:NSDictionary? = nil
+                do {
+                    dict  = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.init(rawValue: 0)) as? NSDictionary
+                } catch {
+                    
+                }
+                print(dict ?? "no value")
+                result = dict!
+            }
+            else {
+                print(error!)
+            }
+            semaphore.signal()
+        })
+        dataTask.resume()
+    }
+    _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+    return result as NSDictionary
+}
+
+
+// 手机号快捷登录
+func mobileLogin(phone: String, verification: String) -> NSDictionary {
+    var result: NSDictionary = [:]
+    let globalQueue = DispatchQueue.global()
+    let semaphore = DispatchSemaphore(value: 0)
+    globalQueue.async {
+        let url: NSURL = NSURL(string: "http://180.76.173.200:9999/login/login-quick.do?phone=\(phone)&verification=\(verification)")!
         let request: URLRequest = URLRequest(url: url as URL)
         let session: URLSession = URLSession.shared
         let dataTask: URLSessionDataTask = session.dataTask(with: request, completionHandler: { (data, reponse, error) in

@@ -468,7 +468,7 @@
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
                                                         <action selector="loginButtonTapped:" destination="W7E-lG-jQh" eventType="touchUpInside" id="Bkm-KR-GsQ"/>
-                                                        <segue destination="wEp-mJ-1XB" kind="showDetail" identifier="loginSegue" id="957-uU-02y"/>
+                                                        <segue destination="wEp-mJ-1XB" kind="showDetail" identifier="OldFriendAccountLoginSegue" id="957-uU-02y"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bil-aD-2ge">
@@ -630,6 +630,9 @@
                                                             <state key="normal" title="获取验证码">
                                                                 <color key="titleColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                                                             </state>
+                                                            <connections>
+                                                                <action selector="getVerificationCodeButtonTapped:" destination="T4d-kZ-nt2" eventType="touchUpInside" id="NMI-q8-uWg"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -694,7 +697,8 @@
                                                     <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                     <state key="normal" title="登录"/>
                                                     <connections>
-                                                        <segue destination="wEp-mJ-1XB" kind="showDetail" id="Ytu-eV-CmT"/>
+                                                        <action selector="loginButtonTapped:" destination="T4d-kZ-nt2" eventType="touchUpInside" id="hrN-QP-jCN"/>
+                                                        <segue destination="wEp-mJ-1XB" kind="showDetail" identifier="phoneNumberLoginSegue" id="Ytu-eV-CmT"/>
                                                     </connections>
                                                 </button>
                                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="DtY-vS-q0E">
@@ -733,6 +737,8 @@
                     </tableView>
                     <connections>
                         <outlet property="LoginButton" destination="Ail-6D-t9P" id="SXR-Eh-DXH"/>
+                        <outlet property="phoneTextField" destination="M6U-ab-GY7" id="vZb-dd-xpp"/>
+                        <outlet property="verificationCodeTextField" destination="WxV-Gc-W1L" id="Y0o-xn-inQ"/>
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nfU-8e-W2h" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -1616,7 +1622,7 @@
         <image name="favorite" width="25" height="25"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="957-uU-02y"/>
+        <segue reference="Ytu-eV-CmT"/>
         <segue reference="KqR-lQ-6hy"/>
     </inferredMetricsTieBreakers>
 </document>

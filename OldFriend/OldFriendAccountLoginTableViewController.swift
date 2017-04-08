@@ -19,9 +19,9 @@ class OldFriendAccountLoginTableViewController: UITableViewController {
     }
     
     @IBAction func loginButtonTapped(_ sender: UIButton) {
-        let result = login(phone: mobileTextField.text!, password: passwordTextField.text!)
+        let result = oldFriendAccountLogin(phone: mobileTextField.text!, password: passwordTextField.text!)
         if ((result["ret"] as! Int) == 0) {
-            self.performSegue(withIdentifier: "loginSegue", sender: self)
+            self.performSegue(withIdentifier: "OldFriendAccountLoginSegue", sender: self)
         }
         else if ((result["error"] as! String) == "username or password is wrong") {
             let alertController = UIAlertController(title: "",
