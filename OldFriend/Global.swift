@@ -234,6 +234,11 @@ func mobileLogin(phone: String, verification: String) -> NSDictionary {
     return result as NSDictionary
 }
 
+// 获取验证码图片
+func fetchVerificationImage() {
+    
+}
+
 // 检测两次密码是否相同
 func checkTwoPasswordWhetherSame(firstPassword: String, secondPassword: String) -> Bool {
     return (firstPassword == secondPassword)

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		1F0BDDD71E9A18230087989B /* FindPasswordPhoneNumberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0BDDD61E9A18230087989B /* FindPasswordPhoneNumberTableViewController.swift */; };
 		1F0C80A31E9629ED00E1829C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1F0C80A11E9629ED00E1829C /* Main.storyboard */; };
 		1F0C80A51E962AA000E1829C /* InputVerificationCodeTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F0C80A41E962AA000E1829C /* InputVerificationCodeTableViewController.swift */; };
 		1F25AA511E85185D00AED35E /* SignUpTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1F25AA501E85185D00AED35E /* SignUpTableViewController.swift */; };
@@ -20,11 +21,11 @@
 		1FD36A4F1E826F08003A4734 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD36A4E1E826F08003A4734 /* LoginViewController.swift */; };
 		1FD36A5B1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD36A5A1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift */; };
 		1FD36A5D1E84C2BB003A4734 /* MobileLoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FD36A5C1E84C2BB003A4734 /* MobileLoginViewController.swift */; };
-		1FECF7931E8B59B600A4B2F4 /* FindPasswordPhoneNumberTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1FECF7921E8B59B600A4B2F4 /* FindPasswordPhoneNumberTableViewController.swift */; };
 		A4B237974A4D982CD4C88BFF /* Pods_OldFriend.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 70B4E6AAB0D4F57128B774D0 /* Pods_OldFriend.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		1F0BDDD61E9A18230087989B /* FindPasswordPhoneNumberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPasswordPhoneNumberTableViewController.swift; sourceTree = "<group>"; };
 		1F0C80A21E9629ED00E1829C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1F0C80A41E962AA000E1829C /* InputVerificationCodeTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputVerificationCodeTableViewController.swift; sourceTree = "<group>"; };
 		1F25AA501E85185D00AED35E /* SignUpTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpTableViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +41,6 @@
 		1FD36A4E1E826F08003A4734 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		1FD36A5A1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OldFriendAccountLoginTableViewController.swift; sourceTree = "<group>"; };
 		1FD36A5C1E84C2BB003A4734 /* MobileLoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MobileLoginViewController.swift; sourceTree = "<group>"; };
-		1FECF7921E8B59B600A4B2F4 /* FindPasswordPhoneNumberTableViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FindPasswordPhoneNumberTableViewController.swift; sourceTree = "<group>"; };
 		5D9E047D46F1FA08BAD19F88 /* Pods-OldFriend.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OldFriend.debug.xcconfig"; path = "Pods/Target Support Files/Pods-OldFriend/Pods-OldFriend.debug.xcconfig"; sourceTree = "<group>"; };
 		70B4E6AAB0D4F57128B774D0 /* Pods_OldFriend.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_OldFriend.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7546B3A4DFC159B13F4C1252 /* Pods-OldFriend.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-OldFriend.release.xcconfig"; path = "Pods/Target Support Files/Pods-OldFriend/Pods-OldFriend.release.xcconfig"; sourceTree = "<group>"; };
@@ -115,9 +115,9 @@
 		1FECF7941E8B59BD00A4B2F4 /* FindPassword */ = {
 			isa = PBXGroup;
 			children = (
+				1F0BDDD61E9A18230087989B /* FindPasswordPhoneNumberTableViewController.swift */,
 				1F43327E1E8CB12900E56F86 /* ChangeToNewPasswordTableViewController.swift */,
 				1F326E991E8BF3E9004A7CB5 /* VerificationTableViewController.swift */,
-				1FECF7921E8B59B600A4B2F4 /* FindPasswordPhoneNumberTableViewController.swift */,
 			);
 			name = FindPassword;
 			sourceTree = "<group>";
@@ -264,10 +264,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				1F0C80A51E962AA000E1829C /* InputVerificationCodeTableViewController.swift in Sources */,
+				1F0BDDD71E9A18230087989B /* FindPasswordPhoneNumberTableViewController.swift in Sources */,
 				1F25AA511E85185D00AED35E /* SignUpTableViewController.swift in Sources */,
 				1F326E9A1E8BF3E9004A7CB5 /* VerificationTableViewController.swift in Sources */,
 				1FD36A4F1E826F08003A4734 /* LoginViewController.swift in Sources */,
-				1FECF7931E8B59B600A4B2F4 /* FindPasswordPhoneNumberTableViewController.swift in Sources */,
 				1FD36A5B1E839BAC003A4734 /* OldFriendAccountLoginTableViewController.swift in Sources */,
 				1F664AD31E8CE75E002BC628 /* Global.swift in Sources */,
 				1F43327F1E8CB12900E56F86 /* ChangeToNewPasswordTableViewController.swift in Sources */,
