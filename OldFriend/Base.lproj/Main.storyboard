@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1004" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JZU-Gq-Aue">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1421" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="JZU-Gq-Aue">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -1227,6 +1227,9 @@
                                                     <state key="normal" title="换一张">
                                                         <color key="titleColor" red="0.94901960780000005" green="0.4549019608" blue="0.46666666670000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                     </state>
+                                                    <connections>
+                                                        <action selector="changeVerificationCodeButtonTapped:" destination="Zyj-2w-F6f" eventType="touchUpInside" id="Y4j-jd-qDR"/>
+                                                    </connections>
                                                 </button>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="ZQw-Mv-8FX">
                                                     <rect key="frame" x="221" y="1" width="72" height="40"/>
@@ -1267,7 +1270,8 @@
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
                                                     <connections>
-                                                        <segue destination="esi-v5-wkZ" kind="show" id="P9o-xJ-1Sf"/>
+                                                        <action selector="nextStepButtonTapped:" destination="Zyj-2w-F6f" eventType="touchUpInside" id="2BV-jo-G3j"/>
+                                                        <segue destination="esi-v5-wkZ" kind="show" identifier="findPasswordSendVerificationSegue" id="P9o-xJ-1Sf"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -1300,6 +1304,8 @@
                     <navigationItem key="navigationItem" title="找回登录密码" id="3l5-6I-OYv"/>
                     <connections>
                         <outlet property="changeVerificationCodeButton" destination="5Eo-RS-TMJ" id="z8c-6h-cq9"/>
+                        <outlet property="phoneTextField" destination="XyC-86-ugr" id="S2N-Xm-xaX"/>
+                        <outlet property="verificationCodeTextField" destination="5Er-qZ-5Ud" id="YGc-u1-fV2"/>
                         <outlet property="verificationImageView" destination="ZQw-Mv-8FX" id="pbt-28-OVm"/>
                     </connections>
                 </tableViewController>

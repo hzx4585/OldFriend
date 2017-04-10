@@ -234,10 +234,37 @@ func mobileLogin(phone: String, verification: String) -> NSDictionary {
     return result as NSDictionary
 }
 
-// 获取验证码图片
-func fetchVerificationImage() {
-    
+// 找回密码第一步发送验证码图片
+func verificationCodeSendAfterImageCheck(phone: String, verification: String) -> NSDictionary {
+    var result: NSDictionary = [:]
+    let globalQueue = DispatchQueue.global()
+    let semaphore = DispatchSemaphore(value: 0)
+    globalQueue.async {
+        let url: NSURL = NSURL(string: "http://180.76.173.200:9999/password/verification-send.do?phone=\(phone)&verification_img=\(verification)")!
+        let request: URLRequest = URLRequest(url: url as URL)
+        let session: URLSession = URLSession.shared
+        let dataTask: URLSessionDataTask = session.dataTask(with: request, completionHandler: { (data, reponse, error) in
+            if (error == nil) {
+                var dict:NSDictionary? = nil
+                do {
+                    dict  = try JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions.init(rawValue: 0)) as? NSDictionary
+                } catch {
+                    
+                }
+                print(dict ?? "no value")
+                result = dict!
+            }
+            else {
+                print(error!)
+            }
+            semaphore.signal()
+        })
+        dataTask.resume()
+    }
+    _ = semaphore.wait(timeout: DispatchTime.distantFuture)
+    return result as NSDictionary
 }
+
 
 // 检测两次密码是否相同
 func checkTwoPasswordWhetherSame(firstPassword: String, secondPassword: String) -> Bool {

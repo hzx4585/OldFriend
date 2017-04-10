@@ -9,7 +9,8 @@
 import UIKit
 
 class FindPasswordPhoneNumberTableViewController: UITableViewController {
-    
+    @IBOutlet weak var phoneTextField: UITextField!
+    @IBOutlet weak var verificationCodeTextField: UITextField!
     @IBOutlet weak var changeVerificationCodeButton: UIButton!
     @IBOutlet weak var verificationImageView: UIImageView!
     
@@ -26,6 +27,24 @@ class FindPasswordPhoneNumberTableViewController: UITableViewController {
                 }
             }
         }
+    }
+    
+    @IBAction func nextStepButtonTapped(_ sender: UIButton) {
+        let result = verificationCodeSendAfterImageCheck(phone: phoneTextField.text!, verification: verificationCodeTextField.text!)
+        if (result["ret"] as! Int == 0) {
+            self.performSegue(withIdentifier: "findPasswordSendVerificationSegue", sender: self)
+        }
+        else {
+            print ("Something wrong")
+        }
+    }
+    
+    override func shouldPerformSegue(withIdentifier identifier: String, sender: Any?) -> Bool {
+        return false
+    }
+    
+    @IBAction func changeVerificationCodeButtonTapped(_ sender: UIButton) {
+        fetchImage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
